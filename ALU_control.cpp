@@ -20,6 +20,10 @@ void ALU_control::check_ALU_control_bit(bool* alu_op, string function_field) {
         }
         else if (function_field.compare("101010") == 0) { //set on less than
             this->ALU_control_bit = "0111";
+        }else if (function_field.compare("000000") == 0) { //sll
+            this->ALU_control_bit = "0011";
+        }else if (function_field.compare("000010") == 0) { //srl
+            this->ALU_control_bit = "0100";
         }
     }
     else if (*(temp + 1) == 1) { //Branch
