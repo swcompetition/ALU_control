@@ -32,6 +32,7 @@ void ALU_control::check_ALU_control_bit(bool* alu_op, string function_field) {
     else if(*(temp + 1) == 0){ //LW or SW
         this->ALU_control_bit = "0010"; //add
     }
+    cout << "ALU Control BIt: " << ALU_control_bit << endl;
 }
 
 string ALU_control::get_ALU_control_bit() {
